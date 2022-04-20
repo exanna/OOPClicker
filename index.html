@@ -4,21 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Gulp Browsersync</title>
+  <title>Hello</title>
   <link rel="stylesheet" href="dist/index.css">
+  <script defer src="/dist/index.js" type="module"></script>
+
 </head>
 <body>
 
-  <div>
-    <button class="buyStore" data-name="Madrid">Kup sklep w Madrycie</button>
-    <button class="upgradeStore" data-name="Madrid" disabled>Ulepsz sklep</button>
-  </div>
-  <br><br>
-  <div>
-    <button class="buyStore" data-name="Warsaw">Kup sklep w Warszawie</button>
-    <button class="upgradeStore" data-name="Warsaw" disabled>Ulepsz sklep</button>
-  </div>
+  <div class="container">
+    <section class="user-info-panel">
 
-  <script src="/dist/index.js"></script>
+    </section>
+    <section class="stores">
+      <div class="store">
+        <button class="button button--buy" data-name="Madrid">Kup sklep w Madrycie</button>
+        <button class="button button--upgrade"data-name="Madrid" disabled>Ulepsz sklep</button>
+        <div class="store__info madrid-info-panel"></div>
+      </div>
+      <div class="store">
+        <button class="button button--buy" data-name="Warsaw">Kup sklep w Warszawie</button>
+        <button class="button button--upgrade" data-name="Warsaw" disabled>Ulepsz sklep</button>
+        <div class="store__info warsaw-info-panel"></div>
+      </div>
+    </section>
+
+    <section class="admin-panel">
+      <button class="button button--save">Zapisz</button>
+      <button class="button button--clear">Wyczyść</button>
+    </section>
+  </div>
 </body>
 </html>

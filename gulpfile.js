@@ -4,6 +4,7 @@ const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
 const terser = require('gulp-terser');
 const browsersync = require('browser-sync').create();
+const minifyJs = require('gulp-uglify');
 
 // Sass Task
 function scssTask(){
@@ -14,10 +15,16 @@ function scssTask(){
 }
 
 // JavaScript Task
-function jsTask(){
-  return src('app/js/index.js', { sourcemaps: true })
-    .pipe(terser())
-    .pipe(dest('dist', { sourcemaps: '.' }));
+// function jsTask(){
+//   return src('app/js/index.js', { sourcemaps: true })
+//     .pipe(terser())
+//     .pipe(dest('dist', { sourcemaps: '.' }));
+// }
+
+function jsTask() {
+  return src('app/js/**/*.js')
+    .pipe(minifyJs())
+    .pipe(dest('dist'))
 }
 
 // Browsersync Tasks
