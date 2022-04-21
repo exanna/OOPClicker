@@ -1,0 +1,1 @@
+import{UI}from"./UI.js";class Game extends UI{init(){console.log("siema z Game.jsaaa")}}export{Game};
