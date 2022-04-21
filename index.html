@@ -7,31 +7,374 @@
   <title>Hello</title>
   <link rel="stylesheet" href="dist/index.css">
   <script defer src="/dist/index.js" type="module"></script>
-
 </head>
 <body>
-
-  <div class="container">
-    <section class="user-info-panel">
-
-    </section>
-    <section class="stores">
-      <div class="store">
-        <button class="button button--buy" data-name="Madrid">Kup sklep w Madrycie</button>
-        <button class="button button--upgrade"data-name="Madrid" disabled>Ulepsz sklep</button>
-        <div class="store__info madrid-info-panel"></div>
+  <div class="game">
+    <section class="panel">
+      <div class="panel__item">
+        <p>Cash: <span data-money>1582224.45</span> $</p>
       </div>
-      <div class="store">
-        <button class="button button--buy" data-name="Warsaw">Kup sklep w Warszawie</button>
-        <button class="button button--upgrade" data-name="Warsaw" disabled>Ulepsz sklep</button>
-        <div class="store__info warsaw-info-panel"></div>
+      <div class="panel__item">
+        <p>Profit: <span data-profit>455.09</span> $ / s</p>
+      </div>
+      <div class="panel__item">
+        <p>Level: <span data-level>18</span></p>
+      </div>
+      <div class="panel__item resources">
+        <div class="resources__item">
+          <span class="resources__amount" >0</span>
+          <img class="icon" src="public/images/silicon.png" alt="">
+        </div>
+        <div class="resources__item">
+          <span class="resources__amount" >0</span>
+          <img class="icon" src="public/images/copper.png" alt="">
+        </div>
+        <div class="resources__item">
+          <span class="resources__amount" >0</span>
+          <img class="icon" src="public/images/gold.png" alt="">
+        </div>
+        <div class="resources__item">
+          <span class="resources__amount" >0</span>
+          <img class="icon" src="public/images/chip.png" alt="">
+        </div>
+        <div class="resources__item">
+          <span class="resources__amount" >0</span>
+          <img class="icon" src="public/images/circuit-board.png" alt="">
+        </div>
+        <div class="resources__item">
+          <span class="resources__amount" >0</span>
+          <img class="icon" src="public/images/network.png" alt="">
+        </div>
+        <div class="resources__item">
+          <span class="resources__amount" >0</span>
+          <img class="icon" src="public/images/computer.png" alt="">
+        </div>
       </div>
     </section>
-
-    <section class="admin-panel">
-      <button class="button button--save">Zapisz</button>
-      <button class="button button--clear">Wyczyść</button>
-    </section>
+    <article class="board">
+      <!-- //////// -->
+      <!-- KOPALNIE -->
+      <!-- //////// -->
+      <section class="board__list-item">
+        <!-- KOPALNIA KRZEMU -->
+        <h1>Kopalnie</h1>
+        <div class="board__item">
+          <h2>Krzem <img class="icon" src="public/images/silicon.png" alt=""></h2>
+          <div class="interface">
+            <div class="image">
+              <img src="public/images/mine.png" alt="">
+            </div>
+            <div class="info-panel">
+              <div class="info-panel__item">
+                <p><span data-silicon-profit-info>1</span> / s</p>
+              </div>
+              <div class="info-panel__item info-panel__item--with-icon">
+                <p><span data-silicon-worker-info>0</span><img class="icon" src="public/images/worker.png" alt=""></p>
+              </div>
+              <div class="info-panel__item">
+                <p><span data-silicon-level-info>0</span> lvl</p>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="button" disabled data-silicon-mining-button>Wydobywaj</button>
+              <button class="button" data-silicon-worker-button>Rekrutuj<br> pracownika</button>
+              <button class="button" data-silicon-upgrade-button >Ulepsz</button>
+            </div>
+          </div>
+          <div class="service-panel">
+            <div>
+              <p class="service-panel__item">Koszt ulepszenia: <span data-silicon-price-info>100</span> $</p>
+            </div>
+            <div>
+              <p class="service-panel__item">Koszt pracownika: <span data-silicon-worker-price-info>100</span> $</p>
+            </div>
+          </div>
+        </div>
+        <!-- /////////////////////////////////////////////////////////// -->
+        <!-- KOPALNIA MIEDZI -->
+        <div class="board__item">
+          <h2>Miedź <img class="icon" src="public/images/copper.png" alt=""></h2>
+          <div class="interface">
+            <div class="image">
+              <img src="public/images/mine.png" alt="">
+            </div>
+            <div class="info-panel">
+              <div class="info-panel__item">
+                <p><span data-copper-profit-info>1</span> / s</p>
+              </div>
+              <div class="info-panel__item info-panel__item--with-icon">
+                <p><span data-copper-worker-info>0</span><img class="icon" src="public/images/worker.png" alt=""></p>
+              </div>
+              <div class="info-panel__item">
+                <p><span data-copper-level-info>0</span> lvl</p>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="button" disabled data-copper-mining-button>Wydobywaj</button>
+              <button class="button" data-copper-worker-button>Rekrutuj<br> pracownika</button>
+              <button class="button" data-copper-upgrade-button >Ulepsz</button>
+            </div>
+          </div>
+          <div class="service-panel">
+            <div>
+              <p class="service-panel__item">Koszt ulepszenia: <span data-copper-price-info>300</span> $</p>
+            </div>
+            <div>
+              <p class="service-panel__item">Koszt pracownika: <span data-copper-worker-price-info>300</span> $</p>
+            </div>
+          </div>
+        </div>
+        <!-- /////////////////////////////////////////////////////////// -->
+        <!-- KOPALNIA ZŁOTA -->
+        <div class="board__item">
+          <h2>Złoto <img class="icon" src="public/images/gold.png" alt=""></h2>
+          <div class="interface">
+            <div class="image">
+              <img src="public/images/mine.png" alt="">
+            </div>
+            <div class="info-panel">
+              <div class="info-panel__item">
+                <p><span data-gold-profit-info>1</span> / s</p>
+              </div>
+              <div class="info-panel__item info-panel__item--with-icon">
+                <p><span data-gold-worker-info>0</span><img class="icon" src="public/images/worker.png" alt=""></p>
+              </div>
+              <div class="info-panel__item">
+                <p><span data-gold-level-info>0</span> lvl</p>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="button" disabled data-gold-mining-button>Wydobywaj</button>
+              <button class="button" data-gold-worker-button>Rekrutuj<br> pracownika</button>
+              <button class="button" data-gold-upgrade-button >Ulepsz</button>
+            </div>
+          </div>
+          <div class="service-panel">
+            <div>
+              <p class="service-panel__item">Koszt ulepszenia: <span data-gold-price-info>500</span> $</p>
+            </div>
+            <div>
+              <p class="service-panel__item">Koszt pracownika: <span data-gold-worker-price-info>500</span> $</p>
+            </div>
+          </div>
+        </div>
+        <!-- /////////////////////////////////////////////////////////// -->
+      </section>
+      <!-- //////// -->
+      <!-- FABRYKI -->
+      <!-- //////// -->
+      <section class="board__list-item production">
+        <h1>Fabryki</h1>
+        <!-- Fabryka układów scalonych -->
+        <div class="board__item">
+          <h2>Układ scalony <img class="icon" src="public/images/chip.png" alt=""></h2>
+          <div class="interface">
+            <div class="image">
+              <img src="public/images/factory.png" alt="">
+            </div>
+            <div class="info-panel">
+              <div class="info-panel__item">
+                <p><span data-circuit-profit-info>1</span> / s</p>
+              </div>
+              <div class="info-panel__item info-panel__item--with-icon">
+                <p><span data-circuit-worker-info>0</span><img class="icon" src="public/images/worker.png" alt=""></p>
+              </div>
+              <div class="info-panel__item">
+                <p><span data-circuit-level-info>0</span> lvl</p>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="button" disabled data-circuit-mining-button>Wydobywaj</button>
+              <button class="button" data-circuit-worker-button>Rekrutuj<br> pracownika</button>
+              <button class="button" data-circuit-upgrade-button >Ulepsz</button>
+            </div>
+          </div>
+          <div class="service-panel">
+            <div>
+              <p class="service-panel__item">Koszt ulepszenia: <span data-circuit-price-info>1000</span> $</p>
+            </div>
+            <div>
+              <p class="service-panel__item">Koszt pracownika: <span data-circuit-worker-price-info>1000</span> $</p>
+            </div>
+          </div>
+        </div>
+        <!-- /////////////////////////////////////////////////////////// -->
+        <!-- Fabryka drukowanych płytek -->
+        <div class="board__item">
+          <h2>Drukowana płytka <img class="icon" src="public/images/circuit-board.png" alt=""></h2>
+          <div class="interface">
+            <div class="image">
+              <img src="public/images/factory.png" alt="">
+            </div>
+            <div class="info-panel">
+              <div class="info-panel__item">
+                <p><span data-circuit-board-profit-info>1</span> / s</p>
+              </div>
+              <div class="info-panel__item info-panel__item--with-icon">
+                <p><span data-circuit-board-worker-info>0</span><img class="icon" src="public/images/worker.png" alt=""></p>
+              </div>
+              <div class="info-panel__item">
+                <p><span data-circuit-board-level-info>0</span> lvl</p>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="button" disabled data-circuit-board-mining-button>Wydobywaj</button>
+              <button class="button" data-circuit-board-worker-button>Rekrutuj<br> pracownika</button>
+              <button class="button" data-circuit-board-upgrade-button >Ulepsz</button>
+            </div>
+          </div>
+          <div class="service-panel">
+            <div>
+              <p class="service-panel__item">Koszt ulepszenia: <span data-circuit-board-price-info>3000</span> $</p>
+            </div>
+            <div>
+              <p class="service-panel__item">Koszt pracownika: <span data-circuit-board-worker-price-info>3000</span> $</p>
+            </div>
+          </div>
+        </div>
+        <!-- /////////////////////////////////////////////////////////// -->
+        <!-- Fabryka komponentów -->
+        <div class="board__item">
+          <h2>Komponent <img class="icon" src="public/images/network.png" alt=""></h2>
+          <div class="interface">
+            <div class="image">
+              <img src="public/images/factory.png" alt="">
+            </div>
+            <div class="info-panel">
+              <div class="info-panel__item">
+                <p><span data-component-profit-info>1</span> / s</p>
+              </div>
+              <div class="info-panel__item info-panel__item--with-icon">
+                <p><span data-component-worker-info>0</span><img class="icon" src="public/images/worker.png" alt=""></p>
+              </div>
+              <div class="info-panel__item">
+                <p><span data-component-level-info>0</span> lvl</p>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="button" disabled data-component-mining-button>Wydobywaj</button>
+              <button class="button" data-component-worker-button>Rekrutuj<br> pracownika</button>
+              <button class="button" data-component-upgrade-button >Ulepsz</button>
+            </div>
+          </div>
+          <div class="service-panel">
+            <div>
+              <p class="service-panel__item">Koszt ulepszenia: <span data-component-price-info>5000</span> $</p>
+            </div>
+            <div>
+              <p class="service-panel__item">Koszt pracownika: <span data-component-worker-price-info>5000</span> $</p>
+            </div>
+          </div>
+        </div>
+        <!-- /////////////////////////////////////////////////////////// -->
+        <!-- Fabryka komputerów -->
+        <div class="board__item">
+          <h2>Komputer <img class="icon" src="public/images/computer.png" alt=""></h2>
+          <div class="interface">
+            <div class="image">
+              <img src="public/images/factory.png" alt="">
+            </div>
+            <div class="info-panel">
+              <div class="info-panel__item">
+                <p><span data-pc-profit-info>1</span> / s</p>
+              </div>
+              <div class="info-panel__item info-panel__item--with-icon">
+                <p><span data-pc-worker-info>0</span><img class="icon" src="public/images/worker.png" alt=""></p>
+              </div>
+              <div class="info-panel__item">
+                <p><span data-pc-level-info>0</span> lvl</p>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="button" disabled data-pc-mining-button>Wydobywaj</button>
+              <button class="button" data-pc-worker-button>Rekrutuj<br> pracownika</button>
+              <button class="button" data-pc-upgrade-button >Ulepsz</button>
+            </div>
+          </div>
+          <div class="service-panel">
+            <div>
+              <p class="service-panel__item">Koszt ulepszenia: <span data-pc-price-info>10000</span> $</p>
+            </div>
+            <div>
+              <p class="service-panel__item">Koszt pracownika: <span data-pc-worker-price-info>10000</span> $</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- //////// -->
+      <!-- SKLEPY -->
+      <!-- //////// -->
+      <section class="board__list-item">
+        <h1>Sklep</h1>
+        <div class="board__item">
+          <h2>Sklep</h2>
+          <div class="interface">
+            <div class="image">
+              <img src="public/images/store.png" alt="">
+            </div>
+            <div class="info-panel">
+              <div class="info-panel__item">
+                <p><span data-store-profit-info>1</span> / s</p>
+              </div>
+              <div class="info-panel__item info-panel__item--with-icon">
+                <p><span data-store-worker-info>0</span><img class="icon" src="public/images/worker.png" alt=""></p>
+              </div>
+              <div class="info-panel__item">
+                <p><span data-store-level-info>0</span> lvl</p>
+              </div>
+            </div>
+            <div class="buttons buttons--space-evenly">
+              <button class="button" data-store-worker-button>Rekrutuj<br> pracownika</button>
+              <button class="button" data-store-upgrade-button >Ulepsz</button>
+            </div>
+          </div>
+          <div class="service-panel">
+            <div>
+              <p class="service-panel__item">Koszt ulepszenia: <span data-store-price-info>100</span> $</p>
+            </div>
+            <div>
+              <p class="service-panel__item">Koszt pracownika: <span data-store-worker-price-info>100</span> $</p>
+            </div>
+          </div>
+        </div>
+        <div class="board__item sell-panel">
+          <h2>Sprzedaj</h2>
+          <div class="sell-panel__item">
+            <label for="silicon">Krzem</label>
+            <input type="number" name="silicon" id="">
+          </div>
+          <div class="sell-panel__item">
+            <label for="silicon">Miedź</label>
+            <input type="number" name="silicon" id="">
+          </div>
+          <div class="sell-panel__item">
+            <label for="silicon">Złoto</label>
+            <input type="number" name="silicon" id="">
+          </div>
+          <div class="sell-panel__item">
+            <label for="silicon">Układ scalony</label>
+            <input type="number" name="silicon" id="">
+          </div>
+          <div class="sell-panel__item">
+            <label for="silicon">Drukowana płytka</label>
+            <input type="number" name="silicon" id="">
+          </div>
+          <div class="sell-panel__item">
+            <label for="silicon">Komponent</label>
+            <input type="number" name="silicon" id="">
+          </div>
+          <div class="sell-panel__item">
+            <label for="silicon">Komputer</label>
+            <input type="number" name="silicon" id="">
+          </div>
+          <button class="button" data-store-sell-button>Sprzedaj</button>
+        </div>
+      </section>
+      <section class="admin-panel">
+        <button class="button">Zapisz</button>
+        <button class="button">Wyczyść</button>
+      </section>
+    </article>
   </div>
 </body>
 </html>

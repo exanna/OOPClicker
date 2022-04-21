@@ -1,0 +1,12 @@
+.panel {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: $font-color-light;
+    font-size: 2.5rem;
+    color: $font-color-dark;
+
+    &__item {
+        @include flex-centered();
+    }
+}

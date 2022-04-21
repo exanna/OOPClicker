@@ -1,0 +1,22 @@
+.sell-panel {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+            label {
+                width: 50%;
+                color: $font-color-light;
+                font-size: 2rem;
+            }
+
+            input {
+                width: 40%;
+            }
+    }
+
+    .button {
+        margin-top: 3rem;
+    }
+}

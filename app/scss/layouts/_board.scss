@@ -1,0 +1,54 @@
+.board {
+    background-color: $font-color-dark;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 3;
+
+    &__list-item {
+        display: flex;
+        justify-content: space-evenly;
+        flex-grow: 1;
+        flex-wrap: wrap;
+
+        h1 {
+            margin: 0;
+            width: 100%;
+            padding: .6rem 0;
+            background-color: rgba($red, 0.5);
+            text-align: center;
+            font-size: 3rem;
+            color: $font-color-light;
+            border-bottom: 5px dashed $font-color-light;
+            border-top: 5px dashed $font-color-light;
+
+        }
+
+        .interface {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        min-width: 22%;
+        padding: 2rem;
+        background-color: rgba($font-color-dark, 0.3);
+
+        h2 {
+            @include flex-centered();
+            margin-bottom: 1rem;
+            text-align: center;
+            font-size: 3rem;
+            text-transform: uppercase;
+            color: $font-color-light;
+            letter-spacing: 5px;
+
+            img {
+                margin-left: 20px;
+            }
+        }
+    }
+}

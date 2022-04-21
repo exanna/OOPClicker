@@ -1,5 +1,5 @@
 const { src, dest, watch, series } = require('gulp');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
 const terser = require('gulp-terser');
@@ -14,15 +14,9 @@ function scssTask(){
     .pipe(dest('dist', { sourcemaps: '.' }));
 }
 
-// JavaScript Task
-// function jsTask(){
-//   return src('app/js/index.js', { sourcemaps: true })
-//     .pipe(terser())
-//     .pipe(dest('dist', { sourcemaps: '.' }));
-// }
-
 function jsTask() {
   return src('app/js/**/*.js')
+    .pipe(terser())
     .pipe(minifyJs())
     .pipe(dest('dist'))
 }
@@ -53,5 +47,5 @@ exports.default = series(
   scssTask,
   jsTask,
   browsersyncServe,
-  watchTask
+  watchTask,
 );

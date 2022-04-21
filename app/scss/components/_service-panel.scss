@@ -1,0 +1,10 @@
+.service-panel {
+    padding: 0.6rem;
+    margin-top: 1rem;
+    color: $font-color-light;
+
+    &__item {
+        font-size: 2rem;
+        padding: .5rem;
+    }
+}

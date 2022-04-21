@@ -1,0 +1,13 @@
+.info-panel {
+    @include flex-centered(column);
+    font-size: 3rem;
+    color: $font-color-light;
+
+    &__item {
+        &--with-icon {
+            p {
+                @include flex-centered();
+            }
+        }
+    }
+}
