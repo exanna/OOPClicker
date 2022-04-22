@@ -13,13 +13,13 @@
         h1 {
             margin: 0;
             width: 100%;
+            border-bottom: 5px dashed $font-color-light;
+            border-top: 5px dashed $font-color-light;
             padding: .6rem 0;
-            background-color: rgba($red, 0.5);
+            background-color: rgba($font-color-secondary, 0.5);
             text-align: center;
             font-size: 3rem;
             color: $font-color-light;
-            border-bottom: 5px dashed $font-color-light;
-            border-top: 5px dashed $font-color-light;
 
         }
 
@@ -33,22 +33,33 @@
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        min-width: 22%;
+        margin-top: 20px;
+        margin-bottom: 20px;
         padding: 2rem;
-        background-color: rgba($font-color-dark, 0.3);
+        background-color: rgba($font-color-secondary, 0.3);
+
+        &--small {
+            min-width: 250px;
+        }
 
         h2 {
             @include flex-centered();
             margin-bottom: 1rem;
+            padding: .5rem;
             text-align: center;
             font-size: 3rem;
             text-transform: uppercase;
-            color: $font-color-light;
+            color: $font-color-dark;
             letter-spacing: 5px;
+            background-color: $font-color-light;
 
             img {
                 margin-left: 20px;
             }
+        }
+
+        .buttons {
+            margin-top: 1rem;
         }
     }
 }

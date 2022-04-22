@@ -1,17 +1,15 @@
 .resources {
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 1rem 0;
 
     &__item {
-        padding: 0 2rem;
-        border-right: 5px solid $font-color-dark;
-
-        &:first-child {
-            border-left: 5px solid $font-color-dark;
-        }
+        padding: 0 3rem;
     }
 
     &__amount {
-        font-size: 5rem;
         margin-right: 1rem;
+        font-size: 5rem;
     }
 }

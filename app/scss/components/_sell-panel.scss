@@ -1,18 +1,29 @@
 .sell-panel {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 
     &__item {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+
             label {
                 width: 50%;
                 color: $font-color-light;
                 font-size: 2rem;
+
             }
 
             input {
                 width: 40%;
+                height: 80%;
+                background-color: $font-color-secondary;
+                color: $font-color-light;
+                font-weight: 700;
+                font-size: 1.7rem;
+                padding: 3px;
             }
     }
 
