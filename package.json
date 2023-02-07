@@ -12,6 +12,7 @@
   "devDependencies": {
     "browser-sync": "^2.27.9",
     "cssnano": "^5.1.7",
+    "eslint": "^8.13.0",
     "gulp": "^4.0.2",
     "gulp-image": "^6.3.1",
     "gulp-imagemin": "^8.0.0",

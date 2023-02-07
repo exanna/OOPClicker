@@ -1,7 +1,8 @@
 import { Game } from './Game.js';
 
 window.onload = function() {
-  const game = new Game();
-  game.init();
-  console.log('siema z indexu')
-}
+	const game = new Game();
+	game.init();
+
+
+};
