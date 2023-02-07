@@ -12,6 +12,10 @@
 
 .icon {
     width: 40px;
+
+    &--small {
+        width: 30px;
+    }
 }
 
 .sell-panel__item {
